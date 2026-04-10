@@ -1,4 +1,4 @@
-# Dotto (Legacy HTML/CSS/JS + Express + SQLite)
+# Dotto (Legacy HTML/CSS/JS + Express + MySQL)
 
 ## 권장 폴더 구조
 
@@ -19,6 +19,16 @@ project/
 └── README.md
 ```
 
+## MySQL 환경 변수
+
+```bash
+export DB_HOST=127.0.0.1
+export DB_PORT=3306
+export DB_USER=root
+export DB_PASSWORD=your_password
+export DB_NAME=dotto
+```
+
 ## Google Colab에서 실행 순서
 
 ```bash
@@ -37,4 +47,4 @@ node server.js
 
 - HTML 템플릿은 `templates/`에서 `sendFile`로 제공됩니다.
 - 정적 리소스(CSS/JS)는 `/static/*` 경로로 제공됩니다.
-- DB 파일(`dotto.db`)은 `server.js` 위치에 생성됩니다.
+- DB는 MySQL 서버를 사용합니다 (`DB_*` 환경 변수).
