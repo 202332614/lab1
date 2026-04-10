@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datto - Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-layout">
+      <aside class="sidebar">
+        <h1 class="sidebar-logo">✅ Dotto</h1>
+        <nav>
+          <a href="todolist.html" class="nav-item active">◌ todolist</a>
+          <a href="mypage.html" class="nav-item">◌ mypage</a>
+        </nav>
+        <div class="user-box">
+          <span class="avatar" id="avatar-char">U</span>
+          <strong id="username">user</strong>
+          <button id="logout" class="icon-btn">⤴</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <h2>Todo List</h2>
+        <p class="date" id="todayDate"></p>
+
+        <section class="stats-grid">
+          <article class="card stat-card">
+            <span>전체</span>
+            <h3 id="total">0</h3>
+          </article>
+          <article class="card stat-card">
+            <span>완료</span>
+            <h3 class="green" id="done">0</h3>
+          </article>
+          <article class="card stat-card">
+            <span>진행</span>
+            <h3 class="blue" id="ongoing">0</h3>
+          </article>
+          <article class="card progress-card">
+            <span>진행률</span>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 120 120" class="progress-ring">
+                <circle cx="60" cy="60" r="45" class="track"></circle>
+                <circle cx="60" cy="60" r="45" class="meter" id="progressMeter"></circle>
+              </svg>
+              <strong id="ratio">0%</strong>
+            </div>
+          </article>
+        </section>
+
+        <form id="task-form" class="task-input-row">
+          <input id="taskInput" placeholder="새로운 할 일을 입력하세요..." required />
+          <button class="primary" type="submit">추가하기</button>
+        </form>
+
+        <h3 class="section-title">● 진행 중 <span id="badge">0</span></h3>
+        <ul id="task-list" class="task-list"></ul>
+      </main>
+    </div>
+
+    <script src="todolist.js"></script>
+  </body>
+</html>
