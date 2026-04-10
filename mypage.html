@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datto - MyPage</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-layout">
+      <aside class="sidebar">
+        <h1 class="sidebar-logo">✅ Dotto</h1>
+        <nav>
+          <a href="todolist.html" class="nav-item">◌ todolist</a>
+          <a href="mypage.html" class="nav-item active">◌ mypage</a>
+        </nav>
+        <div class="user-box">
+          <span class="avatar" id="avatar-char">U</span>
+          <strong id="username">user</strong>
+          <button id="logout" class="icon-btn">⤴</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <h2>My Page</h2>
+        <p class="date" id="todayDate"></p>
+
+        <section class="mypage-grid">
+          <article class="card card-wide">
+            <h3>프로필 정보</h3>
+            <form id="profile-form" class="stack-form">
+              <label>표시 이름</label>
+              <input id="displayName" placeholder="표시 이름 입력" />
+              <label>상태 메시지</label>
+              <input id="statusMessage" placeholder="예: 오늘도 화이팅!" />
+              <button type="submit" class="primary">저장하기</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <h3>오늘의 체크리스트</h3>
+            <ul id="habit-list" class="check-list"></ul>
+            <button id="add-habit" class="soft-btn">+ 항목 추가</button>
+          </article>
+
+          <article class="card">
+            <h3>활동 요약</h3>
+            <p>완료한 할 일: <strong id="doneCount">0</strong></p>
+            <p>진행 중 할 일: <strong id="todoCount">0</strong></p>
+            <p>완료율: <strong id="doneRate">0%</strong></p>
+          </article>
+        </section>
+        <p id="mypage-message" class="message"></p>
+      </main>
+    </div>
+
+    <script src="mypage.js"></script>
+  </body>
+</html>
