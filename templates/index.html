@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datto - Login</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="auth-layout">
+      <section class="brand-panel">
+        <div class="brand-overlay-circle circle-lg"></div>
+        <div class="brand-overlay-circle circle-md"></div>
+        <div class="brand-overlay-circle circle-sm"></div>
+        <div class="brand-content">
+          <h1 class="logo">✅ Dotto</h1>
+          <p class="subtitle">: Dot your day</p>
+          <h2>할 일을 깔끔하게,<br />하루를 완벽하게.</h2>
+          <p class="description">
+            간편한 일정 관리로 생산성을 높이세요!<br />체계적인 일정 관리로 더 나은 하루를 시작하세요!
+          </p>
+          <ul class="feature-list">
+            <li><span class="ring"></span> 영양제 챙기기</li>
+            <li><span class="ring"></span> 뽀삐 밥 주기</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="form-panel">
+        <div class="form-wrap">
+          <div class="dot"></div>
+          <h2 id="auth-title">Login</h2>
+          <p id="auth-subtitle">계정에 로그인하여 할 일을 관리 하세요!</p>
+
+          <form id="auth-form">
+            <label for="id">ID</label>
+            <input id="id" name="id" placeholder="아이디를 입력하세요" required />
+
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="비밀번호를 입력하세요"
+              required
+            />
+
+            <div id="confirm-group" class="hidden">
+              <label for="confirmPassword">Check Password</label>
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                placeholder="비밀번호를 입력하세요"
+              />
+            </div>
+
+            <button type="submit" id="auth-submit">login</button>
+          </form>
+
+          <p class="switch-copy" id="switch-copy">
+            아직 계정이 없으신가요?
+            <button class="text-link" id="switch-mode" type="button">회원가입</button>
+          </p>
+          <p class="message" id="auth-message"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
